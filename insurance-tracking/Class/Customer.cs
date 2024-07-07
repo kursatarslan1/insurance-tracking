@@ -14,6 +14,6 @@ namespace insurance_tracking.Class
         public string email { get; set; }
         public string phone_number { get; set; }
         public string identity_number { get; set; }
-        public DateTime birthdate { get; set; }
+        public DateTime birth_date { get; set; }
     }
 }

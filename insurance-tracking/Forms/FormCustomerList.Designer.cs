@@ -28,32 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlFill = new System.Windows.Forms.Panel();
-            this.pnlFillTop = new System.Windows.Forms.Panel();
-            this.lblCustomerCount = new System.Windows.Forms.Label();
-            this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.CustomerPhoto = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dgvCustomerList = new Guna.UI2.WinForms.Guna2DataGridView();
             this.CustomerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerLastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerPhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerMail = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerIdentity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustomerBirthDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pnlFillTop = new System.Windows.Forms.Panel();
             this.pnlTopRight = new System.Windows.Forms.Panel();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblCustomerCount = new System.Windows.Forms.Label();
             this.pnlFill.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomerList)).BeginInit();
             this.pnlFillTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.pnlTopRight.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlFill
             // 
-            this.pnlFill.Controls.Add(this.guna2DataGridView1);
+            this.pnlFill.Controls.Add(this.dgvCustomerList);
             this.pnlFill.Controls.Add(this.pnlFillTop);
             this.pnlFill.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlFill.Location = new System.Drawing.Point(0, 0);
@@ -61,108 +60,80 @@
             this.pnlFill.Size = new System.Drawing.Size(928, 593);
             this.pnlFill.TabIndex = 0;
             // 
-            // pnlFillTop
+            // dgvCustomerList
             // 
-            this.pnlFillTop.BackColor = System.Drawing.Color.White;
-            this.pnlFillTop.Controls.Add(this.pnlTopRight);
-            this.pnlFillTop.Controls.Add(this.lblCustomerCount);
-            this.pnlFillTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlFillTop.Location = new System.Drawing.Point(0, 0);
-            this.pnlFillTop.Name = "pnlFillTop";
-            this.pnlFillTop.Size = new System.Drawing.Size(928, 97);
-            this.pnlFillTop.TabIndex = 0;
-            // 
-            // lblCustomerCount
-            // 
-            this.lblCustomerCount.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblCustomerCount.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblCustomerCount.Location = new System.Drawing.Point(0, 0);
-            this.lblCustomerCount.Name = "lblCustomerCount";
-            this.lblCustomerCount.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.lblCustomerCount.Size = new System.Drawing.Size(138, 97);
-            this.lblCustomerCount.TabIndex = 0;
-            this.lblCustomerCount.Text = "Müşteri Sayısı: 25";
-            this.lblCustomerCount.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // guna2DataGridView1
-            // 
-            this.guna2DataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
-            this.guna2DataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
-            this.guna2DataGridView1.ColumnHeadersHeight = 33;
-            this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CustomerPhoto,
+            this.dgvCustomerList.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvCustomerList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvCustomerList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
+            this.dgvCustomerList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCustomerList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvCustomerList.ColumnHeadersHeight = 33;
+            this.dgvCustomerList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvCustomerList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CustomerName,
             this.CustomerLastName,
             this.CustomerPhoneNumber,
             this.CustomerMail,
             this.CustomerIdentity,
             this.CustomerBirthDate});
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle15;
-            this.guna2DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(0, 97);
-            this.guna2DataGridView1.Name = "guna2DataGridView1";
-            this.guna2DataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
-            this.guna2DataGridView1.RowHeadersVisible = false;
-            this.guna2DataGridView1.RowTemplate.Height = 38;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(928, 496);
-            this.guna2DataGridView1.TabIndex = 1;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(192)))));
-            this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
-            this.guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.guna2DataGridView1.ThemeStyle.HeaderStyle.Height = 33;
-            this.guna2DataGridView1.ThemeStyle.ReadOnly = false;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 38;
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(192)))));
-            this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // CustomerPhoto
-            // 
-            this.CustomerPhoto.HeaderText = "";
-            this.CustomerPhoto.Name = "CustomerPhoto";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCustomerList.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvCustomerList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvCustomerList.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvCustomerList.Location = new System.Drawing.Point(0, 97);
+            this.dgvCustomerList.Name = "dgvCustomerList";
+            this.dgvCustomerList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCustomerList.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvCustomerList.RowHeadersVisible = false;
+            this.dgvCustomerList.RowTemplate.Height = 38;
+            this.dgvCustomerList.Size = new System.Drawing.Size(928, 496);
+            this.dgvCustomerList.TabIndex = 1;
+            this.dgvCustomerList.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
+            this.dgvCustomerList.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.dgvCustomerList.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.dgvCustomerList.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(192)))));
+            this.dgvCustomerList.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvCustomerList.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
+            this.dgvCustomerList.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvCustomerList.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.dgvCustomerList.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvCustomerList.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.dgvCustomerList.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvCustomerList.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dgvCustomerList.ThemeStyle.HeaderStyle.Height = 33;
+            this.dgvCustomerList.ThemeStyle.ReadOnly = false;
+            this.dgvCustomerList.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
+            this.dgvCustomerList.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvCustomerList.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.dgvCustomerList.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvCustomerList.ThemeStyle.RowsStyle.Height = 38;
+            this.dgvCustomerList.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(192)))));
+            this.dgvCustomerList.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // CustomerName
             // 
@@ -181,7 +152,7 @@
             // 
             // CustomerMail
             // 
-            this.CustomerMail.HeaderText = "Müşteri Mail Adresi";
+            this.CustomerMail.HeaderText = "Mail Adresi";
             this.CustomerMail.Name = "CustomerMail";
             // 
             // CustomerIdentity
@@ -193,6 +164,17 @@
             // 
             this.CustomerBirthDate.HeaderText = "Doğum Tarihi";
             this.CustomerBirthDate.Name = "CustomerBirthDate";
+            // 
+            // pnlFillTop
+            // 
+            this.pnlFillTop.BackColor = System.Drawing.Color.White;
+            this.pnlFillTop.Controls.Add(this.pnlTopRight);
+            this.pnlFillTop.Controls.Add(this.lblCustomerCount);
+            this.pnlFillTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlFillTop.Location = new System.Drawing.Point(0, 0);
+            this.pnlFillTop.Name = "pnlFillTop";
+            this.pnlFillTop.Size = new System.Drawing.Size(928, 97);
+            this.pnlFillTop.TabIndex = 0;
             // 
             // pnlTopRight
             // 
@@ -230,6 +212,18 @@
             this.guna2TextBox1.Size = new System.Drawing.Size(210, 36);
             this.guna2TextBox1.TabIndex = 0;
             // 
+            // lblCustomerCount
+            // 
+            this.lblCustomerCount.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblCustomerCount.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblCustomerCount.Location = new System.Drawing.Point(0, 0);
+            this.lblCustomerCount.Name = "lblCustomerCount";
+            this.lblCustomerCount.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.lblCustomerCount.Size = new System.Drawing.Size(138, 97);
+            this.lblCustomerCount.TabIndex = 0;
+            this.lblCustomerCount.Text = "Müşteri Sayısı: 25";
+            this.lblCustomerCount.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
             // FormCustomerList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -240,9 +234,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormCustomerList";
             this.Text = "Müşteri Listesi";
+            this.Load += new System.EventHandler(this.FormCustomerList_Load);
             this.pnlFill.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomerList)).EndInit();
             this.pnlFillTop.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             this.pnlTopRight.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -253,17 +248,16 @@
         private System.Windows.Forms.Panel pnlFill;
         private System.Windows.Forms.Panel pnlFillTop;
         private System.Windows.Forms.Label lblCustomerCount;
-        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
+        private Guna.UI2.WinForms.Guna2DataGridView dgvCustomerList;
         private Guna.UI2.WinForms.Guna2DataGridViewStyler guna2DataGridViewStyler1;
         private Guna.UI2.WinForms.Guna2DataGridViewStyler guna2DataGridViewStyler2;
-        private System.Windows.Forms.DataGridViewImageColumn CustomerPhoto;
+        private System.Windows.Forms.Panel pnlTopRight;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerLastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerPhoneNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerMail;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerIdentity;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerBirthDate;
-        private System.Windows.Forms.Panel pnlTopRight;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
     }
 }

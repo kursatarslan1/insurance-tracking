@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.pnlTop = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnExit = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -35,7 +36,6 @@
             this.lblLogin = new System.Windows.Forms.Label();
             this.pbLogo = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pnlBottom = new System.Windows.Forms.Panel();
-            this.lblRegister = new System.Windows.Forms.LinkLabel();
             this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
             this.cbRememberMe = new Guna.UI2.WinForms.Guna2CheckBox();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
@@ -105,7 +105,7 @@
             // 
             this.lblLogin.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblLogin.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblLogin.ForeColor = System.Drawing.Color.SteelBlue;
+            this.lblLogin.ForeColor = System.Drawing.Color.Red;
             this.lblLogin.Location = new System.Drawing.Point(0, 153);
             this.lblLogin.Name = "lblLogin";
             this.lblLogin.Size = new System.Drawing.Size(341, 39);
@@ -116,7 +116,7 @@
             // pbLogo
             // 
             this.pbLogo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbLogo.Image = global::insurance_tracking.Properties.Resources.N1;
+            this.pbLogo.Image = global::insurance_tracking.Properties.Resources.İDS_GRUP__1_;
             this.pbLogo.ImageRotate = 0F;
             this.pbLogo.Location = new System.Drawing.Point(0, 0);
             this.pbLogo.Name = "pbLogo";
@@ -127,7 +127,6 @@
             // 
             // pnlBottom
             // 
-            this.pnlBottom.Controls.Add(this.lblRegister);
             this.pnlBottom.Controls.Add(this.btnLogin);
             this.pnlBottom.Controls.Add(this.cbRememberMe);
             this.pnlBottom.Controls.Add(this.txtPassword);
@@ -141,17 +140,6 @@
             this.pnlBottom.Size = new System.Drawing.Size(341, 303);
             this.pnlBottom.TabIndex = 2;
             // 
-            // lblRegister
-            // 
-            this.lblRegister.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblRegister.Location = new System.Drawing.Point(40, 234);
-            this.lblRegister.Name = "lblRegister";
-            this.lblRegister.Size = new System.Drawing.Size(261, 32);
-            this.lblRegister.TabIndex = 8;
-            this.lblRegister.TabStop = true;
-            this.lblRegister.Text = "Kayıt Ol";
-            this.lblRegister.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // btnLogin
             // 
             this.btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -159,7 +147,7 @@
             this.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnLogin.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLogin.FillColor = System.Drawing.Color.SteelBlue;
+            this.btnLogin.FillColor = System.Drawing.Color.Red;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Location = new System.Drawing.Point(40, 198);
@@ -263,6 +251,7 @@
             this.Controls.Add(this.pnlLogo);
             this.Controls.Add(this.pnlTop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -288,7 +277,6 @@
         private Guna.UI2.WinForms.Guna2CheckBox cbRememberMe;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.LinkLabel lblRegister;
         private System.Windows.Forms.Label lblLogin;
     }
 }

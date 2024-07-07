@@ -29,16 +29,6 @@
         private void InitializeComponent()
         {
             this.pnlRightSearchBar = new System.Windows.Forms.Panel();
-            this.pnlLeft = new System.Windows.Forms.Panel();
-            this.pnlLeftInside = new System.Windows.Forms.Panel();
-            this.pnlLeftInsideBottom = new System.Windows.Forms.Panel();
-            this.txtSearchCustomer = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblPickCustomer = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pnlMid = new System.Windows.Forms.Panel();
-            this.pnlAssets = new System.Windows.Forms.Panel();
-            this.txtSearchAsset = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblPickAsset = new System.Windows.Forms.Label();
             this.flpInsure = new System.Windows.Forms.FlowLayoutPanel();
             this.lblInsureType = new System.Windows.Forms.Label();
             this.cbInsuranceType = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -64,11 +54,18 @@
             this.txtInsuranceAmount = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblInsuranceAmount = new System.Windows.Forms.Label();
             this.btnInsure = new Guna.UI2.WinForms.Guna2Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlMid = new System.Windows.Forms.Panel();
+            this.pnlInsuranceList = new System.Windows.Forms.Panel();
+            this.txtSearchAsset = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblPickAsset = new System.Windows.Forms.Label();
+            this.pnlLeft = new System.Windows.Forms.Panel();
+            this.pnlLeftInside = new System.Windows.Forms.Panel();
+            this.pnlLeftInsideBottom = new System.Windows.Forms.Panel();
+            this.txtSearchCustomer = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblPickCustomer = new System.Windows.Forms.Label();
+            this.btnNewInsure = new Guna.UI2.WinForms.Guna2Button();
             this.pnlRightSearchBar.SuspendLayout();
-            this.pnlLeft.SuspendLayout();
-            this.pnlLeftInside.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.pnlMid.SuspendLayout();
             this.flpInsure.SuspendLayout();
             this.pnlName.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -77,6 +74,10 @@
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.pnlMid.SuspendLayout();
+            this.pnlLeft.SuspendLayout();
+            this.pnlLeftInside.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlRightSearchBar
@@ -85,149 +86,11 @@
             this.pnlRightSearchBar.Controls.Add(this.flpInsure);
             this.pnlRightSearchBar.Controls.Add(this.panel3);
             this.pnlRightSearchBar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlRightSearchBar.Location = new System.Drawing.Point(267, 25);
+            this.pnlRightSearchBar.Location = new System.Drawing.Point(300, 25);
             this.pnlRightSearchBar.Name = "pnlRightSearchBar";
             this.pnlRightSearchBar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.pnlRightSearchBar.Size = new System.Drawing.Size(811, 676);
+            this.pnlRightSearchBar.Size = new System.Drawing.Size(848, 713);
             this.pnlRightSearchBar.TabIndex = 5;
-            // 
-            // pnlLeft
-            // 
-            this.pnlLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
-            this.pnlLeft.Controls.Add(this.pnlLeftInside);
-            this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlLeft.Location = new System.Drawing.Point(0, 25);
-            this.pnlLeft.Name = "pnlLeft";
-            this.pnlLeft.Size = new System.Drawing.Size(267, 676);
-            this.pnlLeft.TabIndex = 3;
-            // 
-            // pnlLeftInside
-            // 
-            this.pnlLeftInside.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
-            this.pnlLeftInside.Controls.Add(this.pnlLeftInsideBottom);
-            this.pnlLeftInside.Controls.Add(this.txtSearchCustomer);
-            this.pnlLeftInside.Controls.Add(this.lblPickCustomer);
-            this.pnlLeftInside.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlLeftInside.Location = new System.Drawing.Point(0, 0);
-            this.pnlLeftInside.Name = "pnlLeftInside";
-            this.pnlLeftInside.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.pnlLeftInside.Size = new System.Drawing.Size(267, 676);
-            this.pnlLeftInside.TabIndex = 6;
-            // 
-            // pnlLeftInsideBottom
-            // 
-            this.pnlLeftInsideBottom.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlLeftInsideBottom.Location = new System.Drawing.Point(5, 78);
-            this.pnlLeftInsideBottom.Name = "pnlLeftInsideBottom";
-            this.pnlLeftInsideBottom.Size = new System.Drawing.Size(257, 598);
-            this.pnlLeftInsideBottom.TabIndex = 5;
-            // 
-            // txtSearchCustomer
-            // 
-            this.txtSearchCustomer.BorderColor = System.Drawing.Color.Black;
-            this.txtSearchCustomer.BorderRadius = 6;
-            this.txtSearchCustomer.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearchCustomer.DefaultText = "";
-            this.txtSearchCustomer.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearchCustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearchCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearchCustomer.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearchCustomer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtSearchCustomer.FillColor = System.Drawing.Color.LightGray;
-            this.txtSearchCustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchCustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtSearchCustomer.ForeColor = System.Drawing.Color.Black;
-            this.txtSearchCustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchCustomer.IconLeft = global::insurance_tracking.Properties.Resources.search_interface_symbol;
-            this.txtSearchCustomer.Location = new System.Drawing.Point(5, 42);
-            this.txtSearchCustomer.Name = "txtSearchCustomer";
-            this.txtSearchCustomer.PasswordChar = '\0';
-            this.txtSearchCustomer.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtSearchCustomer.PlaceholderText = "Ara";
-            this.txtSearchCustomer.SelectedText = "";
-            this.txtSearchCustomer.Size = new System.Drawing.Size(257, 36);
-            this.txtSearchCustomer.TabIndex = 4;
-            // 
-            // lblPickCustomer
-            // 
-            this.lblPickCustomer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblPickCustomer.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblPickCustomer.Location = new System.Drawing.Point(5, 0);
-            this.lblPickCustomer.Name = "lblPickCustomer";
-            this.lblPickCustomer.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.lblPickCustomer.Size = new System.Drawing.Size(257, 42);
-            this.lblPickCustomer.TabIndex = 3;
-            this.lblPickCustomer.Text = "Müşteri Seç";
-            this.lblPickCustomer.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
-            this.panel3.Controls.Add(this.pnlMid);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(5, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(275, 676);
-            this.panel3.TabIndex = 4;
-            // 
-            // pnlMid
-            // 
-            this.pnlMid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
-            this.pnlMid.Controls.Add(this.pnlAssets);
-            this.pnlMid.Controls.Add(this.txtSearchAsset);
-            this.pnlMid.Controls.Add(this.lblPickAsset);
-            this.pnlMid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMid.Location = new System.Drawing.Point(0, 0);
-            this.pnlMid.Name = "pnlMid";
-            this.pnlMid.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.pnlMid.Size = new System.Drawing.Size(275, 676);
-            this.pnlMid.TabIndex = 6;
-            // 
-            // pnlAssets
-            // 
-            this.pnlAssets.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlAssets.Location = new System.Drawing.Point(5, 78);
-            this.pnlAssets.Name = "pnlAssets";
-            this.pnlAssets.Size = new System.Drawing.Size(265, 598);
-            this.pnlAssets.TabIndex = 5;
-            // 
-            // txtSearchAsset
-            // 
-            this.txtSearchAsset.BorderColor = System.Drawing.Color.Black;
-            this.txtSearchAsset.BorderRadius = 6;
-            this.txtSearchAsset.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearchAsset.DefaultText = "";
-            this.txtSearchAsset.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearchAsset.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearchAsset.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearchAsset.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearchAsset.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtSearchAsset.FillColor = System.Drawing.Color.LightGray;
-            this.txtSearchAsset.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchAsset.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtSearchAsset.ForeColor = System.Drawing.Color.Black;
-            this.txtSearchAsset.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchAsset.IconLeft = global::insurance_tracking.Properties.Resources.search_interface_symbol;
-            this.txtSearchAsset.Location = new System.Drawing.Point(5, 42);
-            this.txtSearchAsset.Name = "txtSearchAsset";
-            this.txtSearchAsset.PasswordChar = '\0';
-            this.txtSearchAsset.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtSearchAsset.PlaceholderText = "Ara";
-            this.txtSearchAsset.SelectedText = "";
-            this.txtSearchAsset.Size = new System.Drawing.Size(265, 36);
-            this.txtSearchAsset.TabIndex = 4;
-            // 
-            // lblPickAsset
-            // 
-            this.lblPickAsset.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblPickAsset.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblPickAsset.Location = new System.Drawing.Point(5, 0);
-            this.lblPickAsset.Name = "lblPickAsset";
-            this.lblPickAsset.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.lblPickAsset.Size = new System.Drawing.Size(265, 42);
-            this.lblPickAsset.TabIndex = 3;
-            this.lblPickAsset.Text = "Varlık Seç";
-            this.lblPickAsset.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // flpInsure
             // 
@@ -242,9 +105,9 @@
             this.flpInsure.Controls.Add(this.panel7);
             this.flpInsure.Controls.Add(this.btnInsure);
             this.flpInsure.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flpInsure.Location = new System.Drawing.Point(280, 0);
+            this.flpInsure.Location = new System.Drawing.Point(323, 0);
             this.flpInsure.Name = "flpInsure";
-            this.flpInsure.Size = new System.Drawing.Size(523, 676);
+            this.flpInsure.Size = new System.Drawing.Size(523, 713);
             this.flpInsure.TabIndex = 5;
             // 
             // lblInsureType
@@ -613,23 +476,175 @@
             this.btnInsure.TabIndex = 13;
             this.btnInsure.Text = "Sigorta Kes";
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
+            this.panel3.Controls.Add(this.pnlMid);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(5, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(318, 713);
+            this.panel3.TabIndex = 4;
+            // 
+            // pnlMid
+            // 
+            this.pnlMid.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
+            this.pnlMid.Controls.Add(this.btnNewInsure);
+            this.pnlMid.Controls.Add(this.pnlInsuranceList);
+            this.pnlMid.Controls.Add(this.txtSearchAsset);
+            this.pnlMid.Controls.Add(this.lblPickAsset);
+            this.pnlMid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMid.Location = new System.Drawing.Point(0, 0);
+            this.pnlMid.Name = "pnlMid";
+            this.pnlMid.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.pnlMid.Size = new System.Drawing.Size(318, 713);
+            this.pnlMid.TabIndex = 6;
+            // 
+            // pnlInsuranceList
+            // 
+            this.pnlInsuranceList.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlInsuranceList.Location = new System.Drawing.Point(5, 78);
+            this.pnlInsuranceList.Name = "pnlInsuranceList";
+            this.pnlInsuranceList.Size = new System.Drawing.Size(308, 544);
+            this.pnlInsuranceList.TabIndex = 5;
+            // 
+            // txtSearchAsset
+            // 
+            this.txtSearchAsset.BorderColor = System.Drawing.Color.Black;
+            this.txtSearchAsset.BorderRadius = 6;
+            this.txtSearchAsset.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearchAsset.DefaultText = "";
+            this.txtSearchAsset.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearchAsset.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearchAsset.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchAsset.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchAsset.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtSearchAsset.FillColor = System.Drawing.Color.LightGray;
+            this.txtSearchAsset.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchAsset.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSearchAsset.ForeColor = System.Drawing.Color.Black;
+            this.txtSearchAsset.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchAsset.IconLeft = global::insurance_tracking.Properties.Resources.search_interface_symbol;
+            this.txtSearchAsset.Location = new System.Drawing.Point(5, 42);
+            this.txtSearchAsset.Name = "txtSearchAsset";
+            this.txtSearchAsset.PasswordChar = '\0';
+            this.txtSearchAsset.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtSearchAsset.PlaceholderText = "Ara";
+            this.txtSearchAsset.SelectedText = "";
+            this.txtSearchAsset.Size = new System.Drawing.Size(308, 36);
+            this.txtSearchAsset.TabIndex = 4;
+            // 
+            // lblPickAsset
+            // 
+            this.lblPickAsset.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblPickAsset.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblPickAsset.Location = new System.Drawing.Point(5, 0);
+            this.lblPickAsset.Name = "lblPickAsset";
+            this.lblPickAsset.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.lblPickAsset.Size = new System.Drawing.Size(308, 42);
+            this.lblPickAsset.TabIndex = 3;
+            this.lblPickAsset.Text = "Varlık Seç";
+            this.lblPickAsset.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // pnlLeft
+            // 
+            this.pnlLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
+            this.pnlLeft.Controls.Add(this.pnlLeftInside);
+            this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlLeft.Location = new System.Drawing.Point(0, 25);
+            this.pnlLeft.Name = "pnlLeft";
+            this.pnlLeft.Size = new System.Drawing.Size(300, 713);
+            this.pnlLeft.TabIndex = 3;
+            // 
+            // pnlLeftInside
+            // 
+            this.pnlLeftInside.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
+            this.pnlLeftInside.Controls.Add(this.pnlLeftInsideBottom);
+            this.pnlLeftInside.Controls.Add(this.txtSearchCustomer);
+            this.pnlLeftInside.Controls.Add(this.lblPickCustomer);
+            this.pnlLeftInside.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlLeftInside.Location = new System.Drawing.Point(0, 0);
+            this.pnlLeftInside.Name = "pnlLeftInside";
+            this.pnlLeftInside.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.pnlLeftInside.Size = new System.Drawing.Size(300, 713);
+            this.pnlLeftInside.TabIndex = 6;
+            // 
+            // pnlLeftInsideBottom
+            // 
+            this.pnlLeftInsideBottom.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlLeftInsideBottom.Location = new System.Drawing.Point(5, 78);
+            this.pnlLeftInsideBottom.Name = "pnlLeftInsideBottom";
+            this.pnlLeftInsideBottom.Size = new System.Drawing.Size(290, 544);
+            this.pnlLeftInsideBottom.TabIndex = 5;
+            // 
+            // txtSearchCustomer
+            // 
+            this.txtSearchCustomer.BorderColor = System.Drawing.Color.Black;
+            this.txtSearchCustomer.BorderRadius = 6;
+            this.txtSearchCustomer.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearchCustomer.DefaultText = "";
+            this.txtSearchCustomer.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearchCustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearchCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchCustomer.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchCustomer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtSearchCustomer.FillColor = System.Drawing.Color.LightGray;
+            this.txtSearchCustomer.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchCustomer.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSearchCustomer.ForeColor = System.Drawing.Color.Black;
+            this.txtSearchCustomer.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchCustomer.IconLeft = global::insurance_tracking.Properties.Resources.search_interface_symbol;
+            this.txtSearchCustomer.Location = new System.Drawing.Point(5, 42);
+            this.txtSearchCustomer.Name = "txtSearchCustomer";
+            this.txtSearchCustomer.PasswordChar = '\0';
+            this.txtSearchCustomer.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtSearchCustomer.PlaceholderText = "Ara";
+            this.txtSearchCustomer.SelectedText = "";
+            this.txtSearchCustomer.Size = new System.Drawing.Size(290, 36);
+            this.txtSearchCustomer.TabIndex = 4;
+            // 
+            // lblPickCustomer
+            // 
+            this.lblPickCustomer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblPickCustomer.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblPickCustomer.Location = new System.Drawing.Point(5, 0);
+            this.lblPickCustomer.Name = "lblPickCustomer";
+            this.lblPickCustomer.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.lblPickCustomer.Size = new System.Drawing.Size(290, 42);
+            this.lblPickCustomer.TabIndex = 3;
+            this.lblPickCustomer.Text = "Müşteri Seç";
+            this.lblPickCustomer.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // btnNewInsure
+            // 
+            this.btnNewInsure.BorderRadius = 10;
+            this.btnNewInsure.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNewInsure.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNewInsure.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNewInsure.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNewInsure.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnNewInsure.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnNewInsure.ForeColor = System.Drawing.Color.White;
+            this.btnNewInsure.Location = new System.Drawing.Point(5, 622);
+            this.btnNewInsure.Name = "btnNewInsure";
+            this.btnNewInsure.Size = new System.Drawing.Size(308, 45);
+            this.btnNewInsure.TabIndex = 14;
+            this.btnNewInsure.Text = "Yeni Oluştur";
+            // 
             // FormInsure
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1083, 701);
+            this.ClientSize = new System.Drawing.Size(1153, 738);
             this.Controls.Add(this.pnlRightSearchBar);
             this.Controls.Add(this.pnlLeft);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormInsure";
             this.Padding = new System.Windows.Forms.Padding(0, 25, 5, 0);
             this.Text = "Sigorta Yap";
+            this.Load += new System.EventHandler(this.FormInsure_Load);
             this.pnlRightSearchBar.ResumeLayout(false);
-            this.pnlLeft.ResumeLayout(false);
-            this.pnlLeftInside.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.pnlMid.ResumeLayout(false);
             this.flpInsure.ResumeLayout(false);
             this.pnlName.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
@@ -638,6 +653,10 @@
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.pnlMid.ResumeLayout(false);
+            this.pnlLeft.ResumeLayout(false);
+            this.pnlLeftInside.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -651,7 +670,7 @@
         private System.Windows.Forms.Label lblPickCustomer;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel pnlMid;
-        private System.Windows.Forms.Panel pnlAssets;
+        private System.Windows.Forms.Panel pnlInsuranceList;
         private Guna.UI2.WinForms.Guna2TextBox txtSearchAsset;
         private System.Windows.Forms.Label lblPickAsset;
         private System.Windows.Forms.FlowLayoutPanel flpInsure;
@@ -679,5 +698,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtInsuranceAmount;
         private System.Windows.Forms.Label lblInsuranceAmount;
         private Guna.UI2.WinForms.Guna2Button btnInsure;
+        private Guna.UI2.WinForms.Guna2Button btnNewInsure;
     }
 }

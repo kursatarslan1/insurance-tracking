@@ -38,7 +38,6 @@ namespace insurance_tracking.Forms
 
             lblName.Text = user.first_name + " " + user.last_name;
             lblCompany.Text = user.company_name;
-            var test = await db.GetCustomerList();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -133,6 +132,11 @@ namespace insurance_tracking.Forms
         private void btnInsure_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FormInsure(), sender);
+        }
+
+        private void btnOffers_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormOffers(), sender);
         }
     }
 }

@@ -31,27 +31,27 @@
             this.pnlLeft = new System.Windows.Forms.Panel();
             this.flpCustomer = new System.Windows.Forms.FlowLayoutPanel();
             this.pnlName = new System.Windows.Forms.Panel();
-            this.lblFirstName = new System.Windows.Forms.Label();
             this.txtFirstName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblFirstName = new System.Windows.Forms.Label();
             this.pnlLastName = new System.Windows.Forms.Panel();
+            this.txtLastName = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblLastName = new System.Windows.Forms.Label();
             this.pnlIdentity = new System.Windows.Forms.Panel();
+            this.txtIdentity = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblIdentity = new System.Windows.Forms.Label();
             this.pnlPhone = new System.Windows.Forms.Panel();
+            this.txtPhoneNumber = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblPhoneNumber = new System.Windows.Forms.Label();
             this.pnlMail = new System.Windows.Forms.Panel();
+            this.txtMailAddress = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblMailAddress = new System.Windows.Forms.Label();
             this.pnlBirthDate = new System.Windows.Forms.Panel();
+            this.dtpBirthDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.lblBirthDate = new System.Windows.Forms.Label();
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
             this.btnClear = new Guna.UI2.WinForms.Guna2Button();
             this.btnDeleteCustomer = new Guna.UI2.WinForms.Guna2Button();
-            this.txtLastName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtIdentity = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtPhoneNumber = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtMailAddress = new Guna.UI2.WinForms.Guna2TextBox();
-            this.dtpBirthDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.pnlRightTop = new System.Windows.Forms.Panel();
             this.lblPickCustomer = new System.Windows.Forms.Label();
             this.pnlRightSearchBar = new System.Windows.Forms.Panel();
@@ -107,17 +107,6 @@
             this.pnlName.Size = new System.Drawing.Size(265, 80);
             this.pnlName.TabIndex = 1;
             // 
-            // lblFirstName
-            // 
-            this.lblFirstName.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblFirstName.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblFirstName.Location = new System.Drawing.Point(5, 5);
-            this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(255, 33);
-            this.lblFirstName.TabIndex = 0;
-            this.lblFirstName.Text = "Adı:";
-            this.lblFirstName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // txtFirstName
             // 
             this.txtFirstName.BorderRadius = 6;
@@ -141,6 +130,17 @@
             this.txtFirstName.Size = new System.Drawing.Size(255, 42);
             this.txtFirstName.TabIndex = 1;
             // 
+            // lblFirstName
+            // 
+            this.lblFirstName.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblFirstName.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblFirstName.Location = new System.Drawing.Point(5, 5);
+            this.lblFirstName.Name = "lblFirstName";
+            this.lblFirstName.Size = new System.Drawing.Size(255, 33);
+            this.lblFirstName.TabIndex = 0;
+            this.lblFirstName.Text = "Adı:";
+            this.lblFirstName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // pnlLastName
             // 
             this.pnlLastName.Controls.Add(this.txtLastName);
@@ -150,6 +150,29 @@
             this.pnlLastName.Padding = new System.Windows.Forms.Padding(5);
             this.pnlLastName.Size = new System.Drawing.Size(265, 80);
             this.pnlLastName.TabIndex = 2;
+            // 
+            // txtLastName
+            // 
+            this.txtLastName.BorderRadius = 6;
+            this.txtLastName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtLastName.DefaultText = "";
+            this.txtLastName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtLastName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtLastName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtLastName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtLastName.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtLastName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtLastName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtLastName.ForeColor = System.Drawing.Color.Black;
+            this.txtLastName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtLastName.Location = new System.Drawing.Point(5, 38);
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.PasswordChar = '\0';
+            this.txtLastName.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.txtLastName.PlaceholderText = "Arslan";
+            this.txtLastName.SelectedText = "";
+            this.txtLastName.Size = new System.Drawing.Size(255, 42);
+            this.txtLastName.TabIndex = 2;
             // 
             // lblLastName
             // 
@@ -172,6 +195,29 @@
             this.pnlIdentity.Size = new System.Drawing.Size(536, 80);
             this.pnlIdentity.TabIndex = 3;
             // 
+            // txtIdentity
+            // 
+            this.txtIdentity.BorderRadius = 6;
+            this.txtIdentity.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtIdentity.DefaultText = "";
+            this.txtIdentity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtIdentity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtIdentity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIdentity.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIdentity.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtIdentity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIdentity.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtIdentity.ForeColor = System.Drawing.Color.Black;
+            this.txtIdentity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIdentity.Location = new System.Drawing.Point(5, 38);
+            this.txtIdentity.Name = "txtIdentity";
+            this.txtIdentity.PasswordChar = '\0';
+            this.txtIdentity.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.txtIdentity.PlaceholderText = "12345678910";
+            this.txtIdentity.SelectedText = "";
+            this.txtIdentity.Size = new System.Drawing.Size(526, 42);
+            this.txtIdentity.TabIndex = 2;
+            // 
             // lblIdentity
             // 
             this.lblIdentity.Dock = System.Windows.Forms.DockStyle.Top;
@@ -192,6 +238,29 @@
             this.pnlPhone.Padding = new System.Windows.Forms.Padding(5);
             this.pnlPhone.Size = new System.Drawing.Size(536, 80);
             this.pnlPhone.TabIndex = 4;
+            // 
+            // txtPhoneNumber
+            // 
+            this.txtPhoneNumber.BorderRadius = 6;
+            this.txtPhoneNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPhoneNumber.DefaultText = "";
+            this.txtPhoneNumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPhoneNumber.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPhoneNumber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPhoneNumber.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPhoneNumber.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtPhoneNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPhoneNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtPhoneNumber.ForeColor = System.Drawing.Color.Black;
+            this.txtPhoneNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPhoneNumber.Location = new System.Drawing.Point(5, 38);
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.PasswordChar = '\0';
+            this.txtPhoneNumber.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.txtPhoneNumber.PlaceholderText = "+90 543 987 65 42";
+            this.txtPhoneNumber.SelectedText = "";
+            this.txtPhoneNumber.Size = new System.Drawing.Size(526, 42);
+            this.txtPhoneNumber.TabIndex = 2;
             // 
             // lblPhoneNumber
             // 
@@ -214,6 +283,29 @@
             this.pnlMail.Size = new System.Drawing.Size(265, 80);
             this.pnlMail.TabIndex = 5;
             // 
+            // txtMailAddress
+            // 
+            this.txtMailAddress.BorderRadius = 6;
+            this.txtMailAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMailAddress.DefaultText = "";
+            this.txtMailAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMailAddress.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMailAddress.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMailAddress.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMailAddress.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtMailAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMailAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtMailAddress.ForeColor = System.Drawing.Color.Black;
+            this.txtMailAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMailAddress.Location = new System.Drawing.Point(5, 38);
+            this.txtMailAddress.Name = "txtMailAddress";
+            this.txtMailAddress.PasswordChar = '\0';
+            this.txtMailAddress.PlaceholderForeColor = System.Drawing.Color.DimGray;
+            this.txtMailAddress.PlaceholderText = "test@example.com";
+            this.txtMailAddress.SelectedText = "";
+            this.txtMailAddress.Size = new System.Drawing.Size(255, 42);
+            this.txtMailAddress.TabIndex = 2;
+            // 
             // lblMailAddress
             // 
             this.lblMailAddress.Dock = System.Windows.Forms.DockStyle.Top;
@@ -234,6 +326,22 @@
             this.pnlBirthDate.Padding = new System.Windows.Forms.Padding(5);
             this.pnlBirthDate.Size = new System.Drawing.Size(265, 80);
             this.pnlBirthDate.TabIndex = 6;
+            // 
+            // dtpBirthDate
+            // 
+            this.dtpBirthDate.BorderRadius = 6;
+            this.dtpBirthDate.Checked = true;
+            this.dtpBirthDate.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dtpBirthDate.FillColor = System.Drawing.Color.White;
+            this.dtpBirthDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpBirthDate.Location = new System.Drawing.Point(5, 38);
+            this.dtpBirthDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpBirthDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpBirthDate.Name = "dtpBirthDate";
+            this.dtpBirthDate.Size = new System.Drawing.Size(255, 42);
+            this.dtpBirthDate.TabIndex = 1;
+            this.dtpBirthDate.Value = new System.DateTime(2024, 7, 2, 0, 49, 49, 239);
             // 
             // lblBirthDate
             // 
@@ -261,6 +369,7 @@
             this.btnAdd.Size = new System.Drawing.Size(175, 45);
             this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "Ekle";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnUpdate
             // 
@@ -276,6 +385,7 @@
             this.btnUpdate.Size = new System.Drawing.Size(175, 45);
             this.btnUpdate.TabIndex = 8;
             this.btnUpdate.Text = "Düzenlemeyi Kaydet";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnClear
             // 
@@ -292,6 +402,7 @@
             this.btnClear.Size = new System.Drawing.Size(175, 45);
             this.btnClear.TabIndex = 9;
             this.btnClear.Text = "Temizle";
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnDeleteCustomer
             // 
@@ -308,114 +419,7 @@
             this.btnDeleteCustomer.Size = new System.Drawing.Size(536, 45);
             this.btnDeleteCustomer.TabIndex = 10;
             this.btnDeleteCustomer.Text = "Müşteriyi Sil";
-            // 
-            // txtLastName
-            // 
-            this.txtLastName.BorderRadius = 6;
-            this.txtLastName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtLastName.DefaultText = "";
-            this.txtLastName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtLastName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtLastName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtLastName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtLastName.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtLastName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLastName.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtLastName.ForeColor = System.Drawing.Color.Black;
-            this.txtLastName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtLastName.Location = new System.Drawing.Point(5, 38);
-            this.txtLastName.Name = "txtLastName";
-            this.txtLastName.PasswordChar = '\0';
-            this.txtLastName.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.txtLastName.PlaceholderText = "Arslan";
-            this.txtLastName.SelectedText = "";
-            this.txtLastName.Size = new System.Drawing.Size(255, 42);
-            this.txtLastName.TabIndex = 2;
-            // 
-            // txtIdentity
-            // 
-            this.txtIdentity.BorderRadius = 6;
-            this.txtIdentity.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtIdentity.DefaultText = "";
-            this.txtIdentity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtIdentity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtIdentity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIdentity.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtIdentity.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtIdentity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdentity.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtIdentity.ForeColor = System.Drawing.Color.Black;
-            this.txtIdentity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtIdentity.Location = new System.Drawing.Point(5, 38);
-            this.txtIdentity.Name = "txtIdentity";
-            this.txtIdentity.PasswordChar = '\0';
-            this.txtIdentity.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.txtIdentity.PlaceholderText = "12345678910";
-            this.txtIdentity.SelectedText = "";
-            this.txtIdentity.Size = new System.Drawing.Size(526, 42);
-            this.txtIdentity.TabIndex = 2;
-            // 
-            // txtPhoneNumber
-            // 
-            this.txtPhoneNumber.BorderRadius = 6;
-            this.txtPhoneNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPhoneNumber.DefaultText = "";
-            this.txtPhoneNumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPhoneNumber.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPhoneNumber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPhoneNumber.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPhoneNumber.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtPhoneNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhoneNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtPhoneNumber.ForeColor = System.Drawing.Color.Black;
-            this.txtPhoneNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhoneNumber.Location = new System.Drawing.Point(5, 38);
-            this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.PasswordChar = '\0';
-            this.txtPhoneNumber.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.txtPhoneNumber.PlaceholderText = "+90 543 987 65 42";
-            this.txtPhoneNumber.SelectedText = "";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(526, 42);
-            this.txtPhoneNumber.TabIndex = 2;
-            // 
-            // txtMailAddress
-            // 
-            this.txtMailAddress.BorderRadius = 6;
-            this.txtMailAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtMailAddress.DefaultText = "";
-            this.txtMailAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtMailAddress.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtMailAddress.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMailAddress.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMailAddress.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtMailAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMailAddress.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtMailAddress.ForeColor = System.Drawing.Color.Black;
-            this.txtMailAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMailAddress.Location = new System.Drawing.Point(5, 38);
-            this.txtMailAddress.Name = "txtMailAddress";
-            this.txtMailAddress.PasswordChar = '\0';
-            this.txtMailAddress.PlaceholderForeColor = System.Drawing.Color.DimGray;
-            this.txtMailAddress.PlaceholderText = "test@example.com";
-            this.txtMailAddress.SelectedText = "";
-            this.txtMailAddress.Size = new System.Drawing.Size(255, 42);
-            this.txtMailAddress.TabIndex = 2;
-            // 
-            // dtpBirthDate
-            // 
-            this.dtpBirthDate.BorderRadius = 6;
-            this.dtpBirthDate.Checked = true;
-            this.dtpBirthDate.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dtpBirthDate.FillColor = System.Drawing.Color.White;
-            this.dtpBirthDate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpBirthDate.Location = new System.Drawing.Point(5, 38);
-            this.dtpBirthDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpBirthDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpBirthDate.Name = "dtpBirthDate";
-            this.dtpBirthDate.Size = new System.Drawing.Size(255, 42);
-            this.dtpBirthDate.TabIndex = 1;
-            this.dtpBirthDate.Value = new System.DateTime(2024, 7, 2, 0, 49, 49, 239);
+            this.btnDeleteCustomer.Click += new System.EventHandler(this.btnDeleteCustomer_Click);
             // 
             // pnlRightTop
             // 
@@ -450,10 +454,10 @@
             // 
             // pnlRightCustomers
             // 
-            this.pnlRightCustomers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlRightCustomers.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlRightCustomers.Location = new System.Drawing.Point(5, 36);
             this.pnlRightCustomers.Name = "pnlRightCustomers";
-            this.pnlRightCustomers.Size = new System.Drawing.Size(297, 452);
+            this.pnlRightCustomers.Size = new System.Drawing.Size(297, 440);
             this.pnlRightCustomers.TabIndex = 2;
             // 
             // guna2TextBox1
@@ -493,6 +497,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormCustomerEdit";
             this.Text = "Müşteri Ekle/Düzenle/Sil";
+            this.Load += new System.EventHandler(this.FormCustomerEdit_Load);
             this.pnlLeft.ResumeLayout(false);
             this.flpCustomer.ResumeLayout(false);
             this.pnlName.ResumeLayout(false);

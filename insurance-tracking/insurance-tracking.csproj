@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>İDS GRUP.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
@@ -99,6 +102,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDbContext.cs" />
+    <Compile Include="Cards\CustomerCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cards\CustomerCard.Designer.cs">
+      <DependentUpon>CustomerCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cards\InsureCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Cards\InsureCard.Designer.cs">
+      <DependentUpon>InsureCard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Class\Customer.cs" />
     <Compile Include="Class\Insure.cs" />
     <Compile Include="Class\User.cs" />
@@ -144,10 +159,23 @@
     <Compile Include="Forms\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormOffers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormOffers.Designer.cs">
+      <DependentUpon>FormOffers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CustomerService.cs" />
+    <Compile Include="Services\InsuranceServices.cs" />
     <Compile Include="Services\UserService.cs" />
+    <EmbeddedResource Include="Cards\CustomerCard.resx">
+      <DependentUpon>CustomerCard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cards\InsureCard.resx">
+      <DependentUpon>InsureCard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -220,6 +248,17 @@
   <ItemGroup>
     <None Include="Resources\insurance.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\discount.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\İDS GRUP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\İDS GRUP %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="İDS GRUP.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
