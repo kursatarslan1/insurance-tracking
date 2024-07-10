@@ -56,7 +56,7 @@
             this.lblPickCustomer = new System.Windows.Forms.Label();
             this.pnlRightSearchBar = new System.Windows.Forms.Panel();
             this.pnlRightCustomers = new System.Windows.Forms.Panel();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtSearchBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.pnlLeft.SuspendLayout();
             this.flpCustomer.SuspendLayout();
             this.pnlName.SuspendLayout();
@@ -444,7 +444,7 @@
             // pnlRightSearchBar
             // 
             this.pnlRightSearchBar.Controls.Add(this.pnlRightCustomers);
-            this.pnlRightSearchBar.Controls.Add(this.guna2TextBox1);
+            this.pnlRightSearchBar.Controls.Add(this.txtSearchBox);
             this.pnlRightSearchBar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlRightSearchBar.Location = new System.Drawing.Point(554, 83);
             this.pnlRightSearchBar.Name = "pnlRightSearchBar";
@@ -460,30 +460,31 @@
             this.pnlRightCustomers.Size = new System.Drawing.Size(297, 440);
             this.pnlRightCustomers.TabIndex = 2;
             // 
-            // guna2TextBox1
+            // txtSearchBox
             // 
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.BorderRadius = 6;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.IconLeft = global::insurance_tracking.Properties.Resources.search_interface_symbol;
-            this.guna2TextBox1.Location = new System.Drawing.Point(5, 0);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.guna2TextBox1.PlaceholderText = "Ara";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(297, 36);
-            this.guna2TextBox1.TabIndex = 1;
+            this.txtSearchBox.BorderColor = System.Drawing.Color.Black;
+            this.txtSearchBox.BorderRadius = 6;
+            this.txtSearchBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearchBox.DefaultText = "";
+            this.txtSearchBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearchBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearchBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.txtSearchBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSearchBox.ForeColor = System.Drawing.Color.Black;
+            this.txtSearchBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchBox.IconLeft = global::insurance_tracking.Properties.Resources.search_interface_symbol;
+            this.txtSearchBox.Location = new System.Drawing.Point(5, 0);
+            this.txtSearchBox.Name = "txtSearchBox";
+            this.txtSearchBox.PasswordChar = '\0';
+            this.txtSearchBox.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtSearchBox.PlaceholderText = "Ara";
+            this.txtSearchBox.SelectedText = "";
+            this.txtSearchBox.Size = new System.Drawing.Size(297, 36);
+            this.txtSearchBox.TabIndex = 1;
+            this.txtSearchBox.TextChanged += new System.EventHandler(this.txtSearchBox_TextChanged);
             // 
             // FormCustomerEdit
             // 
@@ -541,7 +542,7 @@
         private System.Windows.Forms.Panel pnlRightTop;
         private System.Windows.Forms.Label lblPickCustomer;
         private System.Windows.Forms.Panel pnlRightSearchBar;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearchBox;
         private System.Windows.Forms.Panel pnlRightCustomers;
     }
 }

@@ -133,5 +133,32 @@ namespace insurance_tracking.Services
                 return false;
             }
         }
+
+        public async Task<Customer> GetCustomer(int customer_id)
+        {
+            try
+            {
+                var response = await _httpClient.GetAsync($"{_apiUrl}/customer/{customer_id}");
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var responseContent = await response.Content.ReadAsStringAsync();
+                    var responseObject = JsonConvert.DeserializeObject<dynamic>(responseContent);
+                    var customerJson = responseObject.customer.ToString();
+                    var customer = JsonConvert.DeserializeObject<Customer>(customerJson);
+                    return customer;
+                }
+                else
+                {
+                    Console.WriteLine($"Failed to get customer. Status Code: {response.StatusCode}");
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in GetCustomer method: {ex.Message}");
+                return null;
+            }
+        }
     }
 }

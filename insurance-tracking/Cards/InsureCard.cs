@@ -32,6 +32,7 @@ namespace insurance_tracking.Cards
             lblInsureType.Text = "Sigorta tipi: " + insure.insurance_type;
             lblPlate.Text = "Plaka: " + insure.plate;
             lblAddress.Text = insure.address;
+            lblIsActive.Text = insure.is_active == true ? "\"Sigorta durumu: \"Aktif" : "\"Sigorta durumu: \"Pasif";
         }
     }
 }

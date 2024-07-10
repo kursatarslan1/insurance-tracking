@@ -42,7 +42,7 @@
             this.CustomerBirthDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlFillTop = new System.Windows.Forms.Panel();
             this.pnlTopRight = new System.Windows.Forms.Panel();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtSearchBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblCustomerCount = new System.Windows.Forms.Label();
             this.pnlFill.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomerList)).BeginInit();
@@ -72,10 +72,10 @@
             this.dgvCustomerList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
             this.dgvCustomerList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Maroon;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Maroon;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvCustomerList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -178,7 +178,7 @@
             // 
             // pnlTopRight
             // 
-            this.pnlTopRight.Controls.Add(this.guna2TextBox1);
+            this.pnlTopRight.Controls.Add(this.txtSearchBox);
             this.pnlTopRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlTopRight.Location = new System.Drawing.Point(713, 0);
             this.pnlTopRight.Name = "pnlTopRight";
@@ -186,31 +186,32 @@
             this.pnlTopRight.Size = new System.Drawing.Size(215, 97);
             this.pnlTopRight.TabIndex = 1;
             // 
-            // guna2TextBox1
+            // txtSearchBox
             // 
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.BorderRadius = 6;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.guna2TextBox1.FillColor = System.Drawing.Color.LightGray;
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.IconLeft = global::insurance_tracking.Properties.Resources.search_interface_symbol;
-            this.guna2TextBox1.Location = new System.Drawing.Point(0, 56);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.guna2TextBox1.PlaceholderText = "Ara";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(210, 36);
-            this.guna2TextBox1.TabIndex = 0;
+            this.txtSearchBox.BorderColor = System.Drawing.Color.Black;
+            this.txtSearchBox.BorderRadius = 6;
+            this.txtSearchBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearchBox.DefaultText = "";
+            this.txtSearchBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearchBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearchBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchBox.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.txtSearchBox.FillColor = System.Drawing.Color.LightGray;
+            this.txtSearchBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSearchBox.ForeColor = System.Drawing.Color.Black;
+            this.txtSearchBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchBox.IconLeft = global::insurance_tracking.Properties.Resources.search_interface_symbol;
+            this.txtSearchBox.Location = new System.Drawing.Point(0, 56);
+            this.txtSearchBox.Name = "txtSearchBox";
+            this.txtSearchBox.PasswordChar = '\0';
+            this.txtSearchBox.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtSearchBox.PlaceholderText = "Ara";
+            this.txtSearchBox.SelectedText = "";
+            this.txtSearchBox.Size = new System.Drawing.Size(210, 36);
+            this.txtSearchBox.TabIndex = 0;
+            this.txtSearchBox.TextChanged += new System.EventHandler(this.txtSearchBox_TextChanged);
             // 
             // lblCustomerCount
             // 
@@ -252,7 +253,7 @@
         private Guna.UI2.WinForms.Guna2DataGridViewStyler guna2DataGridViewStyler1;
         private Guna.UI2.WinForms.Guna2DataGridViewStyler guna2DataGridViewStyler2;
         private System.Windows.Forms.Panel pnlTopRight;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearchBox;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerLastName;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustomerPhoneNumber;

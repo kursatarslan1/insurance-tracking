@@ -34,6 +34,7 @@
             this.lblInsureType = new System.Windows.Forms.Label();
             this.pnlRight = new System.Windows.Forms.Panel();
             this.btnPickInsure = new Guna.UI2.WinForms.Guna2Button();
+            this.lblIsActive = new System.Windows.Forms.Label();
             this.pnlLeft.SuspendLayout();
             this.pnlRight.SuspendLayout();
             this.SuspendLayout();
@@ -51,6 +52,7 @@
             // 
             // pnlLeft
             // 
+            this.pnlLeft.Controls.Add(this.lblIsActive);
             this.pnlLeft.Controls.Add(this.lblAddress);
             this.pnlLeft.Controls.Add(this.lblPlate);
             this.pnlLeft.Controls.Add(this.lblInsureType);
@@ -58,7 +60,7 @@
             this.pnlLeft.Location = new System.Drawing.Point(0, 0);
             this.pnlLeft.Name = "pnlLeft";
             this.pnlLeft.Padding = new System.Windows.Forms.Padding(5);
-            this.pnlLeft.Size = new System.Drawing.Size(203, 101);
+            this.pnlLeft.Size = new System.Drawing.Size(203, 118);
             this.pnlLeft.TabIndex = 1;
             // 
             // lblAddress
@@ -89,7 +91,7 @@
             this.pnlRight.Location = new System.Drawing.Point(203, 0);
             this.pnlRight.Name = "pnlRight";
             this.pnlRight.Padding = new System.Windows.Forms.Padding(10, 20, 10, 20);
-            this.pnlRight.Size = new System.Drawing.Size(97, 101);
+            this.pnlRight.Size = new System.Drawing.Size(97, 118);
             this.pnlRight.TabIndex = 2;
             // 
             // btnPickInsure
@@ -104,10 +106,20 @@
             this.btnPickInsure.ForeColor = System.Drawing.Color.White;
             this.btnPickInsure.Location = new System.Drawing.Point(10, 20);
             this.btnPickInsure.Name = "btnPickInsure";
-            this.btnPickInsure.Size = new System.Drawing.Size(77, 61);
+            this.btnPickInsure.Size = new System.Drawing.Size(77, 78);
             this.btnPickInsure.TabIndex = 0;
             this.btnPickInsure.Text = "seç";
             this.btnPickInsure.Click += new System.EventHandler(this.btnPickInsure_Click);
+            // 
+            // lblIsActive
+            // 
+            this.lblIsActive.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblIsActive.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblIsActive.Location = new System.Drawing.Point(5, 88);
+            this.lblIsActive.Name = "lblIsActive";
+            this.lblIsActive.Size = new System.Drawing.Size(193, 23);
+            this.lblIsActive.TabIndex = 3;
+            this.lblIsActive.Text = "label3";
             // 
             // InsureCard
             // 
@@ -116,7 +128,7 @@
             this.Controls.Add(this.pnlRight);
             this.Controls.Add(this.pnlLeft);
             this.Name = "InsureCard";
-            this.Size = new System.Drawing.Size(300, 101);
+            this.Size = new System.Drawing.Size(300, 118);
             this.Load += new System.EventHandler(this.InsureCard_Load);
             this.pnlLeft.ResumeLayout(false);
             this.pnlRight.ResumeLayout(false);
@@ -132,5 +144,6 @@
         private System.Windows.Forms.Label lblInsureType;
         private System.Windows.Forms.Panel pnlRight;
         private Guna.UI2.WinForms.Guna2Button btnPickInsure;
+        private System.Windows.Forms.Label lblIsActive;
     }
 }

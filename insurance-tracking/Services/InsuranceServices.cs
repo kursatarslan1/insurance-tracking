@@ -74,7 +74,30 @@ namespace insurance_tracking.Services
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error in GetCustomers method: {ex.Message}");
+                Console.WriteLine($"Error in GetInsureListByCustomerId method: {ex.Message}");
+                return null;
+            }
+        }
+
+        public async Task<List<Insure>> GetInsureList()
+        {
+            try
+            {
+                var response = await _httpClient.GetAsync($"{_apiUrl}/insures");
+
+                if (response.IsSuccessStatusCode)
+                {
+                    var responseContent = await response.Content.ReadAsStringAsync();
+                    var responseData = JsonConvert.DeserializeObject<dynamic>(responseContent);
+                    var insuresJson = responseData.insureList.ToString();
+                    var insures = JsonConvert.DeserializeObject<List<Insure>>(insuresJson);
+
+                    return insures;
+                }
+                return null;
+            } catch (Exception ex)
+            {
+                Console.WriteLine($"Error in GetInsureList method: {ex.Message}");
                 return null;
             }
         }

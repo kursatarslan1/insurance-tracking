@@ -19,9 +19,6 @@ namespace insurance_tracking.Forms
         public FormCustomerList()
         {
             InitializeComponent();
-            dgvCustomerList.Columns["CustomerName"].DefaultCellStyle.Font = new Font("Calibri", 14);
-            dgvCustomerList.Columns["CustomerLastName"].DefaultCellStyle.Font = new Font("Calibri", 14);
-            // ayarla
         }
 
         private async void FormCustomerList_Load(object sender, EventArgs e)
@@ -33,6 +30,29 @@ namespace insurance_tracking.Forms
             }
 
             lblCustomerCount.Text = "Müşteri Sayısı: " + customers.Count.ToString();
+        }
+
+        private void txtSearchBox_TextChanged(object sender, EventArgs e)
+        {
+            string searchText = txtSearchBox.Text.ToLower();
+            var filteredCustomers = customers.Where(c =>
+                c.first_name.ToLower().Contains(searchText) ||
+                c.last_name.ToLower().Contains(searchText) ||
+                c.phone_number.ToLower().Contains(searchText) ||
+                c.email.ToLower().Contains(searchText) ||
+                c.identity_number.ToLower().Contains(searchText) ||
+                c.birth_date.ToString("yyyy-MM-dd").ToLower().Contains(searchText)).ToList();
+
+            UpdateCustomerList(filteredCustomers);
+        }
+
+        private void UpdateCustomerList(List<Customer> customerList)
+        {
+            dgvCustomerList.Rows.Clear();
+            foreach (Customer customer in customerList)
+            {
+                dgvCustomerList.Rows.Add(customer.first_name, customer.last_name, customer.phone_number, customer.email, customer.identity_number, customer.birth_date);
+            }
         }
     }
 }

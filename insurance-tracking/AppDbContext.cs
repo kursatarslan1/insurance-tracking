@@ -14,6 +14,7 @@ namespace insurance_tracking
         private readonly UserService _userService;
         private readonly CustomerService _customerService;
         private readonly InsuranceServices _insuranceServices;
+        private readonly OfferService _offerService;
         public AppDbContext()
         {
             var httpClient = new HttpClient();
@@ -22,6 +23,7 @@ namespace insurance_tracking
             _userService = new UserService(httpClient, apiUrl);
             _customerService = new CustomerService(httpClient, apiUrl);
             _insuranceServices = new InsuranceServices(httpClient, apiUrl);
+            _offerService = new OfferService(httpClient, apiUrl);
         }
 
         public async Task<User> Login(string email, string password)
@@ -32,6 +34,11 @@ namespace insurance_tracking
         public async Task<List<Customer>> GetCustomerList()
         {
             return await _customerService.Customers();
+        }
+
+        public async Task<Customer> GetCustomer(int customer_id)
+        {
+            return await _customerService.GetCustomer(customer_id); 
         }
 
         public async Task<bool> AddCustomer(Customer customer)
@@ -58,5 +65,22 @@ namespace insurance_tracking
         {
             return await _insuranceServices.GetInsureListByCustomerId(customer_id);
         }
+
+        public async Task<List<Insure>> GetInsureList()
+        {
+            return await _insuranceServices.GetInsureList();
+        }
+
+        public async Task<bool> AddOffer(Offer offer)
+        {
+            return await _offerService.AddOffer(offer);
+        }
+
+        public async Task<List<Offer>> GetOfferList()
+        {
+            return await _offerService.GetOfferList();
+        }
+
+
     }
 }

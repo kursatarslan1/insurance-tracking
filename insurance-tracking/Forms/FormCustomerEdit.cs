@@ -2,11 +2,8 @@
 using insurance_tracking.Class;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -15,8 +12,9 @@ namespace insurance_tracking.Forms
     public partial class FormCustomerEdit : Form
     {
         AppDbContext db = new AppDbContext();
-        Customer customer = new Customer();
+        List<Customer> customers = new List<Customer>();
         Customer selectedCustomer; // Seçilen müşteriyi saklamak için field
+
         public FormCustomerEdit()
         {
             InitializeComponent();
@@ -34,12 +32,15 @@ namespace insurance_tracking.Forms
                 return;
             }
 
-            customer.first_name = txtFirstName.Text;
-            customer.last_name = txtLastName.Text;
-            customer.phone_number = txtPhoneNumber.Text;
-            customer.identity_number = txtIdentity.Text;
-            customer.email = txtMailAddress.Text;
-            customer.birth_date = dtpBirthDate.Value;
+            Customer customer = new Customer
+            {
+                first_name = txtFirstName.Text,
+                last_name = txtLastName.Text,
+                phone_number = txtPhoneNumber.Text,
+                identity_number = txtIdentity.Text,
+                email = txtMailAddress.Text,
+                birth_date = dtpBirthDate.Value
+            };
 
             bool result = await AddCustomer(customer);
 
@@ -49,19 +50,25 @@ namespace insurance_tracking.Forms
                 Reset();
             }
             else
+            {
                 MessageBox.Show("Müşteri eklenemedi.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private async Task<bool> AddCustomer(Customer customer)
         {
             bool result = await db.AddCustomer(customer);
+            if (result)
+            {
+                customers.Add(customer);
+                UpdateCustomerList(customers);
+            }
             return result;
         }
 
         private void Reset()
         {
-            // customer listesini yeniden al
-            customer = new Customer();
+            //customer = new Customer();
             txtFirstName.Text = "";
             txtLastName.Text = "";
             txtPhoneNumber.Text = "";
@@ -77,17 +84,8 @@ namespace insurance_tracking.Forms
 
         private async void FormCustomerEdit_Load(object sender, EventArgs e)
         {
-            var customerList = await db.GetCustomerList();
-
-            foreach (var customer in customerList)
-            {
-                CustomerCard customerCard = new CustomerCard(customer)
-                {
-                    Dock = DockStyle.Top,
-                };
-                customerCard.PickCustomer += CustomerCard_PickCustomer;
-                pnlRightCustomers.Controls.Add(customerCard);
-            }
+            customers = await db.GetCustomerList();
+            UpdateCustomerList(customers);
 
             btnUpdate.Enabled = false;
             btnDeleteCustomer.Enabled = false;
@@ -95,7 +93,6 @@ namespace insurance_tracking.Forms
 
         private void CustomerCard_PickCustomer(Customer customer)
         {
-            // burada customer id var
             selectedCustomer = customer; // Seçilen müşteriyi sakla
             FillCustomer(customer);
             btnUpdate.Enabled = true;
@@ -106,7 +103,6 @@ namespace insurance_tracking.Forms
 
         private void FillCustomer(Customer customer)
         {
-            // burada customer id var
             txtFirstName.Text = customer.first_name;
             txtLastName.Text = customer.last_name;
             txtMailAddress.Text = customer.email;
@@ -128,21 +124,24 @@ namespace insurance_tracking.Forms
                 return;
             }
 
-            // burada customer id var
             selectedCustomer.first_name = txtFirstName.Text;
             selectedCustomer.last_name = txtLastName.Text;
             selectedCustomer.email = txtMailAddress.Text;
-            selectedCustomer.phone_number = txtPhoneNumber.Text; 
+            selectedCustomer.phone_number = txtPhoneNumber.Text;
             selectedCustomer.birth_date = dtpBirthDate.Value;
 
-            await UpdateCustomer(selectedCustomer);
+            bool result = await UpdateCustomer(selectedCustomer);
+            if (result)
+            {
+                UpdateCustomerList(customers);
+            }
         }
 
         private async Task<bool> UpdateCustomer(Customer customer)
         {
-            bool updateCustomer = await db.UpdateCustomer(customer);
+            bool result = await db.UpdateCustomer(customer);
 
-            if (updateCustomer)
+            if (result)
             {
                 MessageBox.Show("Güncelleme başarılı", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return true;
@@ -156,11 +155,13 @@ namespace insurance_tracking.Forms
 
         private async Task<bool> DeleteCustomer(int customer_id)
         {
-            bool deleteCustomer = await db.DeleteCustomer(customer_id);
+            bool result = await db.DeleteCustomer(customer_id);
 
-            if (deleteCustomer)
+            if (result)
             {
                 MessageBox.Show("Silme başarılı", "Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                customers.RemoveAll(c => c.customer_id == customer_id);
+                UpdateCustomerList(customers);
                 return true;
             }
             else
@@ -187,6 +188,34 @@ namespace insurance_tracking.Forms
                 {
                     Reset(); // UI'yi güncelle
                 }
+            }
+        }
+
+        private void txtSearchBox_TextChanged(object sender, EventArgs e)
+        {
+            string searchText = txtSearchBox.Text.ToLower();
+            var filteredCustomers = customers.Where(c =>
+                c.first_name.ToLower().Contains(searchText) ||
+                c.last_name.ToLower().Contains(searchText) ||
+                c.phone_number.ToLower().Contains(searchText) ||
+                c.email.ToLower().Contains(searchText) ||
+                c.identity_number.ToLower().Contains(searchText) ||
+                c.birth_date.ToString("yyyy-MM-dd").ToLower().Contains(searchText)).ToList();
+
+            UpdateCustomerList(filteredCustomers);
+        }
+
+        private void UpdateCustomerList(List<Customer> customerList)
+        {
+            pnlRightCustomers.Controls.Clear();
+            foreach (var customer in customerList)
+            {
+                CustomerCard customerCard = new CustomerCard(customer)
+                {
+                    Dock = DockStyle.Top,
+                };
+                customerCard.PickCustomer += CustomerCard_PickCustomer;
+                pnlRightCustomers.Controls.Add(customerCard);
             }
         }
     }
