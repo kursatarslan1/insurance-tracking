@@ -163,6 +163,16 @@ namespace insurance_tracking.Properties {
         /// <summary>
         ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
         /// </summary>
+        internal static System.Drawing.Bitmap new_offer {
+            get {
+                object obj = ResourceManager.GetObject("new-offer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap türünde yerelleştirilmiş bir kaynak arar.
+        /// </summary>
         internal static System.Drawing.Bitmap people {
             get {
                 object obj = ResourceManager.GetObject("people", resourceCulture);

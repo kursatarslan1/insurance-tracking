@@ -70,7 +70,6 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             this.dgvCustomerList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCustomerList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
-            this.dgvCustomerList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Maroon;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -222,7 +221,7 @@
             this.lblCustomerCount.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.lblCustomerCount.Size = new System.Drawing.Size(138, 97);
             this.lblCustomerCount.TabIndex = 0;
-            this.lblCustomerCount.Text = "Müşteri Sayısı: 25";
+            this.lblCustomerCount.Text = "Müşteri Sayısı: 0";
             this.lblCustomerCount.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // FormCustomerList

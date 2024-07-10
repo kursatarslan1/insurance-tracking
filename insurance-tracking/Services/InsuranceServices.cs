@@ -101,5 +101,28 @@ namespace insurance_tracking.Services
                 return null;
             }
         }
+
+        public async Task<bool> CancelInsurance(int insurance_id)
+        {
+            try
+            {
+                var response = await _httpClient.PutAsync($"{_apiUrl}/insurance/{insurance_id}", null);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    return true;
+                }
+                else
+                {
+                    Console.WriteLine($"Failed to cancel insurance. Status Code: {response.StatusCode}");
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in CancelInsurance method: {ex.Message}");
+                return false;
+            }
+        }
     }
 }

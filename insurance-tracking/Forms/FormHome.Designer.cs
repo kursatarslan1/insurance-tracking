@@ -32,14 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHome));
             this.pnlLeft = new System.Windows.Forms.Panel();
             this.pnlLeftInside = new System.Windows.Forms.Panel();
-            this.btnOffers = new Guna.UI2.WinForms.Guna2Button();
-            this.btnInsure = new Guna.UI2.WinForms.Guna2Button();
-            this.btnInsuranceTrack = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCustomerEdit = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCustomerList = new Guna.UI2.WinForms.Guna2Button();
-            this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.pnlLeftTop = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.pnlTop = new System.Windows.Forms.Panel();
             this.pnlTopMid = new System.Windows.Forms.Panel();
@@ -60,10 +53,17 @@
             this.btnCloseChildForm = new Guna.UI2.WinForms.Guna2Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.btnAddOffer = new Guna.UI2.WinForms.Guna2Button();
+            this.btnOffers = new Guna.UI2.WinForms.Guna2Button();
+            this.btnInsure = new Guna.UI2.WinForms.Guna2Button();
+            this.btnInsuranceTrack = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCustomerEdit = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCustomerList = new Guna.UI2.WinForms.Guna2Button();
+            this.btnHome = new Guna.UI2.WinForms.Guna2Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlLeft.SuspendLayout();
             this.pnlLeftInside.SuspendLayout();
             this.pnlLeftTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlTop.SuspendLayout();
             this.pnlTopLeft.SuspendLayout();
             this.pnlTopLeftInsideRight.SuspendLayout();
@@ -71,6 +71,7 @@
             this.pnlFooter.SuspendLayout();
             this.pnlTopTop.SuspendLayout();
             this.pnlTopBottom.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlLeft
@@ -86,6 +87,7 @@
             // pnlLeftInside
             // 
             this.pnlLeftInside.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
+            this.pnlLeftInside.Controls.Add(this.btnAddOffer);
             this.pnlLeftInside.Controls.Add(this.btnOffers);
             this.pnlLeftInside.Controls.Add(this.btnInsure);
             this.pnlLeftInside.Controls.Add(this.btnInsuranceTrack);
@@ -99,120 +101,6 @@
             this.pnlLeftInside.Size = new System.Drawing.Size(225, 792);
             this.pnlLeftInside.TabIndex = 1;
             // 
-            // btnOffers
-            // 
-            this.btnOffers.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnOffers.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnOffers.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnOffers.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnOffers.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnOffers.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
-            this.btnOffers.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnOffers.ForeColor = System.Drawing.Color.Black;
-            this.btnOffers.Image = global::insurance_tracking.Properties.Resources.discount;
-            this.btnOffers.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnOffers.Location = new System.Drawing.Point(0, 389);
-            this.btnOffers.Name = "btnOffers";
-            this.btnOffers.Size = new System.Drawing.Size(225, 50);
-            this.btnOffers.TabIndex = 5;
-            this.btnOffers.Text = "Teklifler";
-            this.btnOffers.Click += new System.EventHandler(this.btnOffers_Click);
-            // 
-            // btnInsure
-            // 
-            this.btnInsure.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnInsure.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnInsure.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnInsure.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnInsure.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnInsure.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
-            this.btnInsure.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnInsure.ForeColor = System.Drawing.Color.Black;
-            this.btnInsure.Image = global::insurance_tracking.Properties.Resources.insurance;
-            this.btnInsure.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnInsure.Location = new System.Drawing.Point(0, 339);
-            this.btnInsure.Name = "btnInsure";
-            this.btnInsure.Size = new System.Drawing.Size(225, 50);
-            this.btnInsure.TabIndex = 4;
-            this.btnInsure.Text = "Poliçe Ekle";
-            this.btnInsure.Click += new System.EventHandler(this.btnInsure_Click);
-            // 
-            // btnInsuranceTrack
-            // 
-            this.btnInsuranceTrack.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnInsuranceTrack.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnInsuranceTrack.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnInsuranceTrack.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnInsuranceTrack.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnInsuranceTrack.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
-            this.btnInsuranceTrack.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnInsuranceTrack.ForeColor = System.Drawing.Color.Black;
-            this.btnInsuranceTrack.Image = global::insurance_tracking.Properties.Resources.life_insurance;
-            this.btnInsuranceTrack.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnInsuranceTrack.Location = new System.Drawing.Point(0, 289);
-            this.btnInsuranceTrack.Name = "btnInsuranceTrack";
-            this.btnInsuranceTrack.Size = new System.Drawing.Size(225, 50);
-            this.btnInsuranceTrack.TabIndex = 3;
-            this.btnInsuranceTrack.Text = "Poliçe Takip";
-            this.btnInsuranceTrack.Click += new System.EventHandler(this.btnInsuranceTrack_Click);
-            // 
-            // btnCustomerEdit
-            // 
-            this.btnCustomerEdit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCustomerEdit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCustomerEdit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCustomerEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCustomerEdit.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCustomerEdit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
-            this.btnCustomerEdit.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnCustomerEdit.ForeColor = System.Drawing.Color.Black;
-            this.btnCustomerEdit.Image = global::insurance_tracking.Properties.Resources.edit;
-            this.btnCustomerEdit.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCustomerEdit.Location = new System.Drawing.Point(0, 239);
-            this.btnCustomerEdit.Name = "btnCustomerEdit";
-            this.btnCustomerEdit.Size = new System.Drawing.Size(225, 50);
-            this.btnCustomerEdit.TabIndex = 2;
-            this.btnCustomerEdit.Text = "Müşteri Ekle/Düzenle";
-            this.btnCustomerEdit.Click += new System.EventHandler(this.btnCustomerEdit_Click);
-            // 
-            // btnCustomerList
-            // 
-            this.btnCustomerList.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCustomerList.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCustomerList.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCustomerList.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCustomerList.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCustomerList.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
-            this.btnCustomerList.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnCustomerList.ForeColor = System.Drawing.Color.Black;
-            this.btnCustomerList.Image = global::insurance_tracking.Properties.Resources.people;
-            this.btnCustomerList.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnCustomerList.Location = new System.Drawing.Point(0, 189);
-            this.btnCustomerList.Name = "btnCustomerList";
-            this.btnCustomerList.Size = new System.Drawing.Size(225, 50);
-            this.btnCustomerList.TabIndex = 1;
-            this.btnCustomerList.Text = "Müşteri Listesi";
-            this.btnCustomerList.Click += new System.EventHandler(this.btnCustomerList_Click);
-            // 
-            // btnHome
-            // 
-            this.btnHome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnHome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnHome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnHome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHome.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
-            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnHome.ForeColor = System.Drawing.Color.Black;
-            this.btnHome.Image = global::insurance_tracking.Properties.Resources.home;
-            this.btnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnHome.Location = new System.Drawing.Point(0, 139);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(225, 50);
-            this.btnHome.TabIndex = 0;
-            this.btnHome.Text = "Ana Sayfa";
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            // 
             // pnlLeftTop
             // 
             this.pnlLeftTop.Controls.Add(this.pictureBox1);
@@ -221,17 +109,6 @@
             this.pnlLeftTop.Name = "pnlLeftTop";
             this.pnlLeftTop.Size = new System.Drawing.Size(225, 139);
             this.pnlLeftTop.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::insurance_tracking.Properties.Resources.İDS_GRUP;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(225, 139);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // guna2Elipse1
             // 
@@ -455,6 +332,150 @@
             // 
             this.guna2Elipse2.TargetControl = this.pnlTop;
             // 
+            // btnAddOffer
+            // 
+            this.btnAddOffer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddOffer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddOffer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddOffer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddOffer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAddOffer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
+            this.btnAddOffer.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddOffer.ForeColor = System.Drawing.Color.Black;
+            this.btnAddOffer.Image = global::insurance_tracking.Properties.Resources.new_offer;
+            this.btnAddOffer.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAddOffer.Location = new System.Drawing.Point(0, 439);
+            this.btnAddOffer.Name = "btnAddOffer";
+            this.btnAddOffer.Size = new System.Drawing.Size(225, 50);
+            this.btnAddOffer.TabIndex = 6;
+            this.btnAddOffer.Text = "Teklif Oluştur";
+            this.btnAddOffer.Click += new System.EventHandler(this.btnAddOffer_Click);
+            // 
+            // btnOffers
+            // 
+            this.btnOffers.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnOffers.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnOffers.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnOffers.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnOffers.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnOffers.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
+            this.btnOffers.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnOffers.ForeColor = System.Drawing.Color.Black;
+            this.btnOffers.Image = global::insurance_tracking.Properties.Resources.discount;
+            this.btnOffers.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnOffers.Location = new System.Drawing.Point(0, 389);
+            this.btnOffers.Name = "btnOffers";
+            this.btnOffers.Size = new System.Drawing.Size(225, 50);
+            this.btnOffers.TabIndex = 5;
+            this.btnOffers.Text = "Teklifler";
+            this.btnOffers.Click += new System.EventHandler(this.btnOffers_Click);
+            // 
+            // btnInsure
+            // 
+            this.btnInsure.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnInsure.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnInsure.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnInsure.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnInsure.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInsure.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
+            this.btnInsure.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnInsure.ForeColor = System.Drawing.Color.Black;
+            this.btnInsure.Image = global::insurance_tracking.Properties.Resources.insurance;
+            this.btnInsure.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnInsure.Location = new System.Drawing.Point(0, 339);
+            this.btnInsure.Name = "btnInsure";
+            this.btnInsure.Size = new System.Drawing.Size(225, 50);
+            this.btnInsure.TabIndex = 4;
+            this.btnInsure.Text = "Poliçe Ekle";
+            this.btnInsure.Click += new System.EventHandler(this.btnInsure_Click);
+            // 
+            // btnInsuranceTrack
+            // 
+            this.btnInsuranceTrack.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnInsuranceTrack.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnInsuranceTrack.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnInsuranceTrack.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnInsuranceTrack.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnInsuranceTrack.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
+            this.btnInsuranceTrack.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnInsuranceTrack.ForeColor = System.Drawing.Color.Black;
+            this.btnInsuranceTrack.Image = global::insurance_tracking.Properties.Resources.life_insurance;
+            this.btnInsuranceTrack.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnInsuranceTrack.Location = new System.Drawing.Point(0, 289);
+            this.btnInsuranceTrack.Name = "btnInsuranceTrack";
+            this.btnInsuranceTrack.Size = new System.Drawing.Size(225, 50);
+            this.btnInsuranceTrack.TabIndex = 3;
+            this.btnInsuranceTrack.Text = "Poliçe Takip";
+            this.btnInsuranceTrack.Click += new System.EventHandler(this.btnInsuranceTrack_Click);
+            // 
+            // btnCustomerEdit
+            // 
+            this.btnCustomerEdit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCustomerEdit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCustomerEdit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCustomerEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCustomerEdit.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCustomerEdit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
+            this.btnCustomerEdit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCustomerEdit.ForeColor = System.Drawing.Color.Black;
+            this.btnCustomerEdit.Image = global::insurance_tracking.Properties.Resources.edit;
+            this.btnCustomerEdit.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCustomerEdit.Location = new System.Drawing.Point(0, 239);
+            this.btnCustomerEdit.Name = "btnCustomerEdit";
+            this.btnCustomerEdit.Size = new System.Drawing.Size(225, 50);
+            this.btnCustomerEdit.TabIndex = 2;
+            this.btnCustomerEdit.Text = "Müşteri Ekle/Düzenle";
+            this.btnCustomerEdit.Click += new System.EventHandler(this.btnCustomerEdit_Click);
+            // 
+            // btnCustomerList
+            // 
+            this.btnCustomerList.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCustomerList.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCustomerList.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCustomerList.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCustomerList.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCustomerList.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
+            this.btnCustomerList.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCustomerList.ForeColor = System.Drawing.Color.Black;
+            this.btnCustomerList.Image = global::insurance_tracking.Properties.Resources.people;
+            this.btnCustomerList.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCustomerList.Location = new System.Drawing.Point(0, 189);
+            this.btnCustomerList.Name = "btnCustomerList";
+            this.btnCustomerList.Size = new System.Drawing.Size(225, 50);
+            this.btnCustomerList.TabIndex = 1;
+            this.btnCustomerList.Text = "Müşteri Listesi";
+            this.btnCustomerList.Click += new System.EventHandler(this.btnCustomerList_Click);
+            // 
+            // btnHome
+            // 
+            this.btnHome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnHome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnHome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnHome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHome.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(187)))), ((int)(((byte)(196)))));
+            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnHome.ForeColor = System.Drawing.Color.Black;
+            this.btnHome.Image = global::insurance_tracking.Properties.Resources.home;
+            this.btnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnHome.Location = new System.Drawing.Point(0, 139);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(225, 50);
+            this.btnHome.TabIndex = 0;
+            this.btnHome.Text = "Ana Sayfa";
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::insurance_tracking.Properties.Resources.İDS_GRUP;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(225, 139);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // FormHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -475,7 +496,6 @@
             this.pnlLeft.ResumeLayout(false);
             this.pnlLeftInside.ResumeLayout(false);
             this.pnlLeftTop.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlTop.ResumeLayout(false);
             this.pnlTopLeft.ResumeLayout(false);
             this.pnlTopLeftInsideRight.ResumeLayout(false);
@@ -483,6 +503,7 @@
             this.pnlFooter.ResumeLayout(false);
             this.pnlTopTop.ResumeLayout(false);
             this.pnlTopBottom.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -519,5 +540,6 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private Guna.UI2.WinForms.Guna2Button btnInsure;
         private Guna.UI2.WinForms.Guna2Button btnOffers;
+        private Guna.UI2.WinForms.Guna2Button btnAddOffer;
     }
 }

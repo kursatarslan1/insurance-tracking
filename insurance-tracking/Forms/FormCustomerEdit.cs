@@ -11,14 +11,15 @@ namespace insurance_tracking.Forms
 {
     public partial class FormCustomerEdit : Form
     {
-        AppDbContext db = new AppDbContext();
+        AppDbContext db;
         List<Customer> customers = new List<Customer>();
         Customer selectedCustomer; // Seçilen müşteriyi saklamak için field
 
-        public FormCustomerEdit()
+        public FormCustomerEdit(AppDbContext dbContext)
         {
             InitializeComponent();
             pnlRightCustomers.AutoScroll = true;
+            db = dbContext;
         }
 
         private async void btnAdd_Click(object sender, EventArgs e)

@@ -15,7 +15,7 @@ namespace insurance_tracking.Forms
 {
     public partial class FormHome : Form
     {
-        AppDbContext db = new AppDbContext();
+        public static AppDbContext db = new AppDbContext();
         private Guna2Button currentButton;
         private Form activeForm;
         private User user = new User();
@@ -31,7 +31,7 @@ namespace insurance_tracking.Forms
         [DllImport("user32.dll", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int IParam);
 
-        private async void FormHome_Load(object sender, EventArgs e)
+        private void FormHome_Load(object sender, EventArgs e)
         {
             btnHome.PerformClick();
             btnCloseChildForm.Visible = false;
@@ -111,32 +111,37 @@ namespace insurance_tracking.Forms
         }
         private void btnHome_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormMain(), sender);
+            OpenChildForm(new FormMain(db), sender);
         }
 
         private void btnCustomerList_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormCustomerList(), sender);
+            OpenChildForm(new FormCustomerList(db), sender);
         }
 
         private void btnCustomerEdit_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormCustomerEdit(), sender);
+            OpenChildForm(new FormCustomerEdit(db), sender);
         }
 
         private void btnInsuranceTrack_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormInsuranceTrack(), sender);
+            OpenChildForm(new FormInsuranceTrack(db), sender);
         }
 
         private void btnInsure_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormInsure(), sender);
+            OpenChildForm(new FormInsure(db), sender);
         }
 
         private void btnOffers_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new FormOffers(), sender);
+            OpenChildForm(new FormOffers(db), sender);
+        }
+
+        private void btnAddOffer_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FormAddOffer(db), sender);
         }
     }
 }

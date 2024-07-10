@@ -14,21 +14,23 @@ namespace insurance_tracking.Forms
 {
     public partial class FormInsure : Form
     {
-        AppDbContext db = new AppDbContext();
+        AppDbContext db;
         private Insure selectedInsure;
         private Customer selectedCustomer;
         List<Customer> customers = new List<Customer>();
         List<Insure> insures = new List<Insure>();
 
-        public FormInsure()
+        public FormInsure(AppDbContext dbContext)
         {
             InitializeComponent();
             pnlLeftInsideBottom.AutoScroll = true;
             pnlInsuranceList.AutoScroll = true;
+            db = dbContext;
         }
 
         private async void FormInsure_Load(object sender, EventArgs e)
         {
+            pnlMid.Visible = false;
             flpInsure.Visible = false;
             await LoadCustomers();
         }
@@ -51,6 +53,7 @@ namespace insurance_tracking.Forms
         private async void CustomerCard_PickCustomer(Customer customer)
         {
             selectedCustomer = customer;
+            pnlMid.Visible = true;
             selectedInsure = null;
             ResetFields();
             FillCustomerTextBoxes();
@@ -104,7 +107,6 @@ namespace insurance_tracking.Forms
                         txtSerialNo.Text = selectedInsure.serial_no;
                         break;
                     case "Kasko":
-                        // Kasko sigortası için gerekli TextBox doldurma işlemleri
                         break;
                     case "Konut":
                         pnlDocument.Visible = false;
@@ -271,7 +273,7 @@ namespace insurance_tracking.Forms
 
             try
             {
-                bool result = await db.AddInsurence(newInsure);
+                bool result = await db.AddInsurance(newInsure);
 
                 if (result)
                 {

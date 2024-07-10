@@ -14,11 +14,12 @@ namespace insurance_tracking.Forms
 {
     public partial class FormCustomerList : Form
     {
-        AppDbContext db = new AppDbContext();
+        AppDbContext db;
         List<Customer> customers = new List<Customer>();
-        public FormCustomerList()
+        public FormCustomerList(AppDbContext dbContext)
         {
             InitializeComponent();
+            db = dbContext;
         }
 
         private async void FormCustomerList_Load(object sender, EventArgs e)

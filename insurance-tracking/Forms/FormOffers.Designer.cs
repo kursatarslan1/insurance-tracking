@@ -267,7 +267,7 @@
             this.lblCustomerCount.Padding = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.lblCustomerCount.Size = new System.Drawing.Size(138, 97);
             this.lblCustomerCount.TabIndex = 0;
-            this.lblCustomerCount.Text = "Müşteri Sayısı: 25";
+            this.lblCustomerCount.Text = "Teklif Sayısı: 0";
             this.lblCustomerCount.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // FormOffers
